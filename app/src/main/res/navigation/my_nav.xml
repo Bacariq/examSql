@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/depensesListeFragment">
+
+    <fragment
+        android:id="@+id/depensesListeFragment"
+        android:name="com.example.sqlrecap.DepensesListeFragment"
+        android:label="fragment_depenses_liste"
+        tools:layout="@layout/fragment_depenses_liste" >
+        <action
+            android:id="@+id/action_depensesListeFragment_to_depenseAddFragment"
+            app:destination="@id/depenseAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/depenseAddFragment"
+        android:name="com.example.sqlrecap.DepenseAddFragment"
+        android:label="fragment_depense_add"
+        tools:layout="@layout/fragment_depense_add" >
+        <action
+            android:id="@+id/action_depenseAddFragment_to_depensesListeFragment"
+            app:destination="@id/depensesListeFragment" />
+        <argument
+            android:name="depenseId"
+            app:argType="long" />
+    </fragment>
+</navigation>
