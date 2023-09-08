@@ -30,7 +30,7 @@ data class DepenseWithType(
         entityColumn = "typeId",
         associateBy = Junction(DepenseType::class)
     )
-    val types: Type
+    var types: Type
 )
 
 @Entity

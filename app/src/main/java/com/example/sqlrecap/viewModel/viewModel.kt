@@ -26,4 +26,7 @@ class DepenseViewModel: ViewModel() {
         DepenseRepository.deleteDepense(context, depense.depenseId)
     }
 
+    fun getType(context: Context): LiveData<List<Type>>  {
+        return DepenseRepository.getAllType(context)
+    }
 }

@@ -32,6 +32,7 @@
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/type"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editDate" />
@@ -53,11 +54,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="text"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/editPrix"
@@ -66,11 +70,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="number"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/editName" />
+        app:layout_constraintTop_toBottomOf="@+id/editName"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/btnCancel"
@@ -80,7 +87,9 @@
         android:layout_marginBottom="16dp"
         android:src="@drawable/ico_cancel"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAccessibility="no" />
 
     <ImageButton
         android:id="@+id/btnDel"
@@ -90,7 +99,9 @@
         android:layout_marginBottom="16dp"
         android:src="@drawable/ico_del"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btOk" />
+        app:layout_constraintEnd_toStartOf="@+id/btOk"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAccessibility="no" />
 
     <ImageButton
         android:id="@+id/btOk"
@@ -100,7 +111,8 @@
         android:layout_marginBottom="16dp"
         android:src="@drawable/ico_add"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/editDate"
@@ -111,8 +123,32 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="date"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/editPrix" />
+        app:layout_constraintTop_toBottomOf="@+id/editPrix"
+        tools:ignore="LabelFor,SpeakableTextPresentCheck"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/editType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddType"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/editDate" />
+
+    <ImageButton
+        android:id="@+id/btnAddType"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ico_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

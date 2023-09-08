@@ -29,7 +29,8 @@ class DepensesListeFragment : Fragment(), DepenseAdapter.OnLikeClickListener {
     ): View? {
         binding = FragmentDepensesListeBinding.inflate(layoutInflater)
         depenseViewModel = ViewModelProvider(requireActivity()).get(DepenseViewModel::class.java)
-        //depenseViewModel.setDepense(requireActivity())
+
+
         depenseViewModel.getDepenses(requireActivity()).observeForever {
             updateData(it)
         }

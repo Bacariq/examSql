@@ -51,7 +51,7 @@ class DepenseViewHolder (
         Titre.text = depense.depense.nom
         Date.text = depense.depense.date.toString()
         Type.text = depense.types.name.toString()
-        Prix.text = depense.depense.prix.toString()
+        Prix.text = depense.depense.prix.toString() + " €"
 
         view.setOnClickListener {
             onLikeClickListener.onLikeClick( depense)
